@@ -24,6 +24,7 @@ Per [§3.1, Policy 9](03-orchestrator-operational-guidelines.md#31-policies): a 
 3. Governance decision (if needed) and archival.
 
 ## 4.2 Quarterly report template
+> The report template and example below are repository content. Changing them is a Change-Log action: open an issue, propose the edit by pull request, and record it in the Change Log — not an ad-hoc edit.
 
 > _Placeholder — currently being drafted._ The agreed template will live here. A copy is kept at [`quarterly-reports/_TEMPLATE.md`](quarterly-reports/_TEMPLATE.md) so each quarter's report can be created from it and archived in [Section 5](05-quarterly-reports.md).
 
