@@ -1,6 +1,10 @@
 # 6. Program Change Log
 
 > Part of the [Solstice Governance Repository](../README.md). This page is the chronological record of every change to the Solstice program rules — what changed, why, the community issue that raised it, and the resulting FIP (for rule/code changes) or pull request (for repository changes).
+> 
+> The Change Log records every permanent change to this repository, in two categories: (a) governance-tier actions (SRA and SWA) and their associated FIPs, PRs, and network-upgrade announcements; and (b) amendments to the repository's own content — the report template and examples, admission rubric, parameters, and any section text.
+>
+> Both categories are made by pull request and recorded here.
 
 ## 6.1 How changes are classified
 
