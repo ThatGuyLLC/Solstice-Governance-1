@@ -52,6 +52,9 @@ Policies 3, 5, and 8 restate FIP-0118 invariants verbatim:
 ## 3.2 Orchestrators Tasks and Actions
 
 > These are operational tasks and actions; each is a collapsible dropdown, and they may be updated by raising an issue in the present repository.
+> <img width="1600" height="897" alt="image" src="https://github.com/user-attachments/assets/c1750749-9809-452d-9024-7fc904896188" />
+
+
 
 <details>
 <summary><strong>3.2.1 — Deal making</strong></summary>
