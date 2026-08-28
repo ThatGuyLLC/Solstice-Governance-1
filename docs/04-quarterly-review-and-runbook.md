@@ -13,7 +13,7 @@ This section is the runbook for the quarterly review: the community reporting an
 
 ## 4.1 Community Reporting and Disclosure
 
-**Every admitted Orchestrator files a Quarterly Community Report using the template in [§4.2](#42-quarterly-report-template). Failure to file is a removal trigger and forfeits re-admission for the following quarter.**
+**Every admitted Orchestrator files a Quarterly Community Report, from the beginning of their first quarter of operation, using the template in [§4.2](#42-quarterly-report-template). Failure to file is a removal trigger and forfeits re-admission for the following quarter.**
 
 Per [§3.1, Policy 9](03-orchestrator-operational-guidelines.md#31-policies), the report covers claims and reward reception; the fields themselves are fixed by the template.
 
