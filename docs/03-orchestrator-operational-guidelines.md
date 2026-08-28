@@ -14,12 +14,10 @@ The service stream pays for measured, paid storage service. These rules give orc
 
 Orchestrators are free to run their businesses autonomously. The program does not review their pricing, their client selection, or their operations. To maintain trust in the measurement layer, all orchestrators are expected to adhere to the criteria below. These may be revised over time through the standard PR process (and logged in the [Program Change Log](06-changelog.md)).
 
-- **Upfront disclosures.** Before admission, or a binding change, an orchestrator discloses all addresses it controls, has a financial stake in, or is strongly connected to by other means, including any common-control relationship with a payer, an operator, or another orchestrator.
 - **Measurable settlement.** Orchestrators route paid storage service revenue through admitted Filecoin Pay contracts in admitted stablecoins or FIL, and help their clients settle the same way. Volume that bypasses admitted rails is invisible to the mechanism and counts for nothing.
 - **Responsiveness.** Orchestrators respond to dispute and verification requests within the response window (7 days) and keep their contact information in this repository current.
-- **No self-dealing.** An orchestrator does not settle volume between parties under common control, and does not declare a (payer, operator) pair without a client relationship behind it. The disclosure duty above exists so that common control is visible before it becomes a finding post-verification.
 - **Good-faith declarations.** Declarations are accepted by default. The program extends trust upfront because every posted figure is recomputable from public events; misreporting is mechanically detectable and is grounds for removal.
-- **Self-monitoring.** Orchestrators are expected to monitor their own recomputed FPV against posted figures during each verification window, and to flag discrepancies rather than wait for them to surface as findings. A deliberate distinction from the Fil+ program: there are no mandatory governance calls. The duty is to the public record, not to a meeting cadence.
+- **Self-monitoring.** Orchestrators are expected to monitor their own recomputed FPV against posted figures during each verification window, and to flag discrepancies rather than wait for them to surface as findings. 
 
 ## 3.1 Policies
 
