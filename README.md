@@ -40,11 +40,9 @@ Changes happen by pull request with public review — covering, but not limited 
 
 ## 1.5 Repository Maintainers
 
-Maintained by [@Amin-Foundation](https://github.com/Amin-Foundation) and [@Decentramike](https://github.com/Decentramike) 
+This repository is maintained by Filecoin Foundation's Governance Team.
 
 Maintainers keep these docs current and shepherd pull requests — they are **not** the authority over the Solstice program. That authority rests with the two governance tiers (the SWA and SRA Safes) as fixed by FIP-0118.
-
-For any questions tied to the maintenance process you can message governance@fil.org.
 
 ---
 
