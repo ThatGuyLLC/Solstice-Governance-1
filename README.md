@@ -40,9 +40,7 @@ Changes happen by pull request with public review — covering, but not limited 
 
 ## 1.5 Repository Maintainers
 
-This repository is maintained by Filecoin Foundation's Governance Team.
-
-Maintainers keep these docs current and shepherd pull requests — they are **not** the authority over the Solstice program. That authority rests with the two governance tiers (the SWA and SRA Safes) as fixed by FIP-0118.
+Maintainers keep this repository current and administer pull requests. Authority over the Solstice program rests with two governance tiers (the SWA and SRA Safes) as fixed by FIP-0118.
 
 ---
 
