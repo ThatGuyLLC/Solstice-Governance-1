@@ -388,7 +388,7 @@ When admitting an Orchestrator, add a row to the table above and a detailed entr
 
 Each tier consists of two organization multisigs (Safes) registered in the contract it governs. The protocol sees only the two addresses.
 
-| Tier | Contract governed | Filecoin Foundation Safe (address) | FilOZ Safe (address) | Rule (fixed by the FIP) |
+| Tier | Contract governed | Organization 1 Safe (address) | Organisation 2 Safe (address) | Rule (fixed by the FIP) |
 | :-- | :-- | :-- | :-- | :-- |
 | SWA Governance (§2.2) | Stream Weights Actor (SWA) | TBD | TBD | Both approve; either alone cancels |
 | SRA Governance (§2.3) | Service Rewards Actor (SRA) | TBD | TBD | Both approve; either alone cancels |
