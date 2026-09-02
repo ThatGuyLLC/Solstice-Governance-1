@@ -359,7 +359,7 @@ This is the canonical, human-readable list of Orchestrators admitted to the Sols
 
 | # | Orchestrator | Controlling wallet | Status | Admitted (quarter / epoch) | Declaration | Registered (payer, operator) pairs |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| — | *none yet* | — | — | — | — | — |
+| 1 | Orch_1 | 0x97A90f5696be5E3C8d3752C92Adac287c2b4484e | Approved | NA | NA | NA |
 
 **Per-Orchestrator entry template**
 
