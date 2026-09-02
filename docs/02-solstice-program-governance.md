@@ -390,8 +390,8 @@ Each tier consists of two organization multisigs (Safes) registered in the contr
 
 | Tier | Contract governed | Organization 1 Safe (address) | Organisation 2 Safe (address) | Rule (fixed by the FIP) |
 | :-- | :-- | :-- | :-- | :-- |
-| SWA Governance (§2.2) | Stream Weights Actor (SWA) | TBD | TBD | Both approve; either alone cancels |
-| SRA Governance (§2.3) | Service Rewards Actor (SRA) | TBD | TBD | Both approve; either alone cancels |
+| SWA Governance (§2.2) | Stream Weights Actor (SWA) | 0x591FfA9476A038114000166523486948D3a63E57 | 0x024a3c8CCA435db64D2dfa0f903E4823A5eBdf63 | Both approve; either alone cancels |
+| SRA Governance (§2.3) | Service Rewards Actor (SRA) | 0x8B7F1c94c396C2051D97AFF974187A5640136759 | 0xFb1B58925947E52B3f75BAc3D9fB5325cfb36371 | Both approve; either alone cancels |
 
 Each organization runs a separate Safe per tier — four accounts in total — so approvals cannot be replayed across surfaces.
 
