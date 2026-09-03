@@ -2,7 +2,7 @@
 
 > Part of the [Solstice Governance Repository](../README.md). This page is the chronological record of every change to the Solstice program rules — what changed, why, the community issue that raised it, and the resulting FIP (for rule/code changes) or pull request (for repository changes).
 > 
-> The Change Log records every permanent change to this repository, in two categories: (a) governance-tier actions (SRA and SWA) and their associated FIPs, PRs, and network-upgrade announcements; and (b) amendments to the repository's own content — the report template and examples, admission rubric, parameters, and any section text.
+> The Change Log records every permanent change to this repository, in two categories: (a) governance-tier actions (SRA and SWA) and their associated FIPs, PRs, and network-upgrade announcements; and (b) amendments to the repository's own content — Quarterly Orchestrator Report template and examples, admission rubric, parameters, and any section text.
 >
 > Both categories are made by pull request and recorded here.
 
@@ -14,13 +14,13 @@ Per [FIP-0118](https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-011
 | :-- | :-- | :-- |
 | **FIP + Network upgrade** | L1 itself — f02 code and its invariants (split logic, Σw ≤ 1, caps, the `SWA_TIMELOCK` value), or replacing the SWA address. | Accepted FIP **and** a coordinated network upgrade. |
 | **FIP** | Contract code or a rule the threat model relies on (SWA/SRA code upgrade, gate parameters, tier powers, the two-Safes rule). | Accepted FIP + the standard held contract action. |
-| **Repository (PR)** | Operational data and procedures (rosters, hold durations, rubrics, playbooks, admitted lists, the Orchestrator Registry). | Pull request with public review. |
+| **Repository (PR)** | Operational data and procedures (rosters, hold durations, Quarterlyy Orchestrator Report, playbooks, admitted lists, the Orchestrator Registry). | Pull request with public review. |
 
-Each entry should link: (a) the **community issue / discussion** that raised the change, (b) the **FIP** if one was required, and (c) the **PR** that landed the repository edit.
+Each entry should link: (a) the **community issue / discussion** that raised the change, (b) the **FIP** if one was required, and/or (c) the **PR** that landed the repository edit.
 
 ## 6.2 Change log
 
-> **Entries are ordered most-recent first.** The log begins at program establishment; further entries are appended as the program evolves.
+> **Entries are ordered most-recent first.** The log begins at program establishment (Nv29); further entries are appended as the program evolves.
 
 | Date | Change | Type | Community issue / discussion | FIP | PR / commit | Status |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
