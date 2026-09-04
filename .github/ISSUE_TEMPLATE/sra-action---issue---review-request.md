@@ -18,4 +18,3 @@ assignees: ''
 
 - **Rationale for issue:** <the reason recorded on execution — mandatory>
 - **Change Log entry:** <link, or "pending">
-- **Status:** Proposed | Approved | Executed | Withdrawn
