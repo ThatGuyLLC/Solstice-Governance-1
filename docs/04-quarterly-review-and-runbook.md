@@ -172,7 +172,7 @@ A contested `CorrectVolume` follows the same evidence process. Per the FIP, boun
 
 Orchestrator verifications are exception-based, per the FIP, and are never pre-clearance. A scheduled audit cycle would rebuild the review pipeline Solstice deprecates. A verification begins only when a trigger fires: a public-data anomaly, a community report filed as an issue, or a contested binding escalated from the dispute process ([4.4.2](#442-dispute-resolution-for-contested-bindings)).
 
-**Grounds for removal:** wash trading, self-dealing (settling volume between parties under common control), misreported FPV (mechanically detectable, since FPV is recomputable from public events), and binding fraud.
+**Grounds for removal:** failure to submit completed quarterly report, misreported FPV (mechanically detectable, since FPV is recomputable from public events), and binding fraud.
 
 ### 4.4.4 What triggers a verification
 
