@@ -1,4 +1,4 @@
-# 5. Quarterly Reports
+# 5. Reports
 
 > Part of the [Solstice Governance Repository](../README.md). This section is the archive of quarterly reports filed under the Community Reporting and Disclosure duty ([§4.1](04-quarterly-review-and-runbook.md#41-community-reporting-and-disclosure)).
 
