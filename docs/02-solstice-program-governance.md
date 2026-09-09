@@ -57,7 +57,7 @@ Informative summary; the lifecycle table in the FIP is normative.
 | Discretionary SWA write to f02 (alter, add, or remove a stream; re-point a Distribution) | `SWA_TIMELOCK`, 7 days (FIP-fixed) | f02 | Either SWA Safe |
 | SWA internal change (Safe replacement, gate parameters, code upgrade) | Internal timelock, equal to the f02 window (FIP-fixed) | SWA | Either SWA Safe |
 | Quarterly gate step | 7-day queue, visibility only | f02 | No one (mechanism-executed) |
-| Registry change (add/remove orchestrator, replace wallet, set admitted lists, set pricing, replace owner) | None; binds at once | SRA | Either SRA Safe |
+| Registry change (add/remove orchestrator, replace wallet, set admitted lists, set pricing, replace owner) | None; binds at once | SRA | Not cancellable |
 | Registry upgrade | Requires an approved FIP | SRA | Not cancellable |
 | New code upgrade | Requires an approved FIP | SRA | Not cancellable |
 | CorrectVolume | None; bounded by the verification window | SRA | Not cancellable |
