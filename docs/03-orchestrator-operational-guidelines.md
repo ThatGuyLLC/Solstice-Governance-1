@@ -30,7 +30,7 @@ Each policy notes where it is enforced:
 
 | # | Policy | Enforced |
 | :-- | :-- | :-- |
-| 1 | The program is open to any entity that routes paid storage service revenue through admitted settlement rails on behalf of clients. Admission is discretionary in Phase 1, scored against the admission rubric; a future FIP makes admission permissionless in Phase 2. | Repository |
+| 1 | The program is open to any entity that routes paid storage service revenue through admitted settlement rails on behalf of clients. Admission is discretionary in Phase 1; a future FIP makes admission permissionless in Phase 2. | Repository |
 | 2 | Qualifying volume is settlement through admitted Filecoin Pay contracts, in admitted stablecoins or FIL converted off-chain via the reference indexer using public fee-auction prints (`MIN_LOT`, `PRICE_BAND`), attributable to the orchestrator's registered (payer, operator) pairs. Nothing else counts. | Contract |
 | 3 | A (payer, operator) pair binds to exactly one orchestrator. Registering a pair already bound elsewhere reverts. Clients are free to work with multiple orchestrators across different operator relationships; the pair, not the client, is the unit of attribution. | FIP |
 | 4 | Volume counts only for pairs registered before the settlement occurs. Retroactive attribution is not accepted. | Repository |
