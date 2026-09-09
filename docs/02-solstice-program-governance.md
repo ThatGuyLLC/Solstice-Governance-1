@@ -58,8 +58,8 @@ Informative summary; the lifecycle table in the FIP is normative.
 | SWA internal change (Safe replacement, gate parameters, code upgrade) | Internal timelock, equal to the f02 window (FIP-fixed) | SWA | Either SWA Safe |
 | Quarterly gate step | 7-day queue, visibility only | f02 | No one (mechanism-executed) |
 | Registry change (add/remove orchestrator, replace wallet, set admitted lists, set pricing, replace owner) | None; binds at once | SRA | Either SRA Safe |
-| Registry upgrade | Requires an approved FIP | SRA | Either SRA Safe |
-| New code upgrade | Requires an approved FIP | SRA | Either SRA Safe |
+| Registry upgrade | Requires an approved FIP | SRA | Not cancellable |
+| New code upgrade | Requires an approved FIP | SRA | Not cancellable |
 | CorrectVolume | None; bounded by the verification window | SRA | Not cancellable |
 | SetShares, PostVolume, RegisterPairs | None; bounded by the window, the posting period, and the uniqueness check | SRA | Not cancellable |
 
