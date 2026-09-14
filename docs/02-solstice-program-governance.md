@@ -57,9 +57,9 @@ Informative summary; the lifecycle table in the FIP is normative.
 | Discretionary SWA write to f02 (alter, add, or remove a stream; re-point a Distribution) | `SWA_TIMELOCK`, 7 days (FIP-fixed) | f02 | Either SWA Safe |
 | SWA internal change (Safe replacement, gate parameters, code upgrade) | Internal timelock, equal to the f02 window (FIP-fixed) | SWA | Either SWA Safe |
 | Quarterly gate step | 7-day queue, visibility only | f02 | No one (mechanism-executed) |
-| Registry change (add/remove orchestrator, replace wallet, set admitted lists, set pricing, replace owner) | None; binds at once | SRA | Either SRA Safe |
-| Registry upgrade | Requires an approved FIP | SRA | Either SRA Safe |
-| New code upgrade | Requires an approved FIP | SRA | Either SRA Safe |
+| Registry change (add/remove orchestrator, replace wallet, set admitted lists, set pricing, replace owner) | None; binds at once | SRA | Not cancellable |
+| Registry upgrade | Requires an approved FIP | SRA | Not cancellable |
+| New code upgrade | Requires an approved FIP | SRA | Not cancellable |
 | CorrectVolume | None; bounded by the verification window | SRA | Not cancellable |
 | SetShares, PostVolume, RegisterPairs | None; bounded by the window, the posting period, and the uniqueness check | SRA | Not cancellable |
 
@@ -359,7 +359,7 @@ This is the canonical, human-readable list of Orchestrators admitted to the Sols
 
 | # | Orchestrator | Controlling wallet | Status | Admitted (quarter / epoch) | Declaration | Registered (payer, operator) pairs |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| — | *none yet* | — | — | — | — | — |
+| 1 | Orch_1 | 0x97A90f5696be5E3C8d3752C92Adac287c2b4484e | Approved | NA | NA | NA |
 
 **Per-Orchestrator entry template**
 
@@ -388,10 +388,10 @@ When admitting an Orchestrator, add a row to the table above and a detailed entr
 
 Each tier consists of two organization multisigs (Safes) registered in the contract it governs. The protocol sees only the two addresses.
 
-| Tier | Contract governed | Filecoin Foundation Safe (address) | FilOZ Safe (address) | Rule (fixed by the FIP) |
+| Tier | Contract governed | Organization 1 Safe (address) | Organisation 2 Safe (address) | Rule (fixed by the FIP) |
 | :-- | :-- | :-- | :-- | :-- |
-| SWA Governance (§2.2) | Stream Weights Actor (SWA) | TBD | TBD | Both approve; either alone cancels |
-| SRA Governance (§2.3) | Service Rewards Actor (SRA) | TBD | TBD | Both approve; either alone cancels |
+| SWA Governance (§2.2) | Stream Weights Actor (SWA) | 0x591FfA9476A038114000166523486948D3a63E57 | 0x024a3c8CCA435db64D2dfa0f903E4823A5eBdf63 | Both approve; either alone cancels |
+| SRA Governance (§2.3) | Service Rewards Actor (SRA) | 0x8B7F1c94c396C2051D97AFF974187A5640136759 | 0xFb1B58925947E52B3f75BAc3D9fB5325cfb36371 | Both approve; either alone cancels |
 
 Each organization runs a separate Safe per tier — four accounts in total — so approvals cannot be replayed across surfaces.
 

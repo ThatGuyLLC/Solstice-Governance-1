@@ -14,9 +14,9 @@ Every quarter, each Orchestrator files a report using the template in [§4.2](04
 
 > **No reports filed yet.** The first entries appear here once the program starts and the first quarter closes.
 
-| Quarter | Orchestrator | Report | Date filed | Status |
-| :-- | :-- | :-- | :-- | :-- |
-| — | *none yet* | — | — | — |
+| Quarter | Orchestrator | Report | CID | Date filed | Status |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| — | *none yet* | — | — | — |  — |
 
 ---
 

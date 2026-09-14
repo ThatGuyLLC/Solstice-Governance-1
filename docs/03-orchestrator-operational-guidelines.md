@@ -9,17 +9,17 @@ This section consolidates what is expected of Orchestrators: the operational gui
 - [3.1 Policies](#31-policies)
 - [3.2 Orchestrators Tasks and Actions](#32-orchestrators-tasks-and-actions)
 - [3.3 Monitoring tools & references](#33-monitoring-tools--references)
+- [3.4 Solstice Orchestrator Task Checklist](#34-solstice-orchestrator-task-checklist)
 
 The service stream pays for measured, paid storage service. These rules give orchestrators predictability about what is expected and what the consequences of a breach are, and give the network confidence that the number driving the gate and the shares reflects reality. The standing test for any action in the program: **does this volume represent a client paying for storage service on Filecoin?** If the answer is yes, the orchestrator is operating within both the rules and their intent.
 
 Orchestrators are free to run their businesses autonomously. The program does not review their pricing, their client selection, or their operations. To maintain trust in the measurement layer, all orchestrators are expected to adhere to the criteria below. These may be revised over time through the standard PR process (and logged in the [Program Change Log](06-changelog.md)).
 
-- **Upfront disclosures.** Before admission, or a binding change, an orchestrator discloses all addresses it controls, has a financial stake in, or is strongly connected to by other means, including any common-control relationship with a payer, an operator, or another orchestrator.
 - **Measurable settlement.** Orchestrators route paid storage service revenue through admitted Filecoin Pay contracts in admitted stablecoins or FIL, and help their clients settle the same way. Volume that bypasses admitted rails is invisible to the mechanism and counts for nothing.
 - **Responsiveness.** Orchestrators respond to dispute and verification requests within the response window (7 days) and keep their contact information in this repository current.
-- **No self-dealing.** An orchestrator does not settle volume between parties under common control, and does not declare a (payer, operator) pair without a client relationship behind it. The disclosure duty above exists so that common control is visible before it becomes a finding post-verification.
 - **Good-faith declarations.** Declarations are accepted by default. The program extends trust upfront because every posted figure is recomputable from public events; misreporting is mechanically detectable and is grounds for removal.
-- **Self-monitoring.** Orchestrators are expected to monitor their own recomputed FPV against posted figures during each verification window, and to flag discrepancies rather than wait for them to surface as findings. A deliberate distinction from the Fil+ program: there are no mandatory governance calls. The duty is to the public record, not to a meeting cadence.
+- **Self-monitoring.** Orchestrators are expected to monitor their own recomputed FPV against posted figures during each verification window, and to flag discrepancies rather than wait for them to surface as findings.
+- **Wallet Set-up** Orchestrator’s controlling wallet must not be a payment channel actor, this is becasue the f02 rejects payment channels as share recipients.
 
 ## 3.1 Policies
 
@@ -31,7 +31,7 @@ Each policy notes where it is enforced:
 
 | # | Policy | Enforced |
 | :-- | :-- | :-- |
-| 1 | The program is open to any entity that routes paid storage service revenue through admitted settlement rails on behalf of clients. Admission is discretionary in Phase 1, scored against the admission rubric; a future FIP makes admission permissionless in Phase 2. | Repository |
+| 1 | The program is open to any entity that routes paid storage service revenue through admitted settlement rails on behalf of clients. Admission is discretionary in Phase 1; a future FIP makes admission permissionless in Phase 2. | Repository |
 | 2 | Qualifying volume is settlement through admitted Filecoin Pay contracts, in admitted stablecoins or FIL converted off-chain via the reference indexer using public fee-auction prints (`MIN_LOT`, `PRICE_BAND`), attributable to the orchestrator's registered (payer, operator) pairs. Nothing else counts. | Contract |
 | 3 | A (payer, operator) pair binds to exactly one orchestrator. Registering a pair already bound elsewhere reverts. Clients are free to work with multiple orchestrators across different operator relationships; the pair, not the client, is the unit of attribution. | FIP |
 | 4 | Volume counts only for pairs registered before the settlement occurs. Retroactive attribution is not accepted. | Repository |
@@ -52,6 +52,9 @@ Policies 3, 5, and 8 restate FIP-0118 invariants verbatim:
 ## 3.2 Orchestrators Tasks and Actions
 
 > These are operational tasks and actions; each is a collapsible dropdown, and they may be updated by raising an issue in the present repository.
+> <img width="1600" height="897" alt="image" src="https://github.com/user-attachments/assets/c1750749-9809-452d-9024-7fc904896188" />
+
+
 
 <details>
 <summary><strong>3.2.1 — Deal making</strong></summary>
@@ -161,6 +164,150 @@ These tools are meant to ease the monitoring of the program's activity. Orchestr
 - Settlement data and dashboards: *(links to be added)*
 - Registry state, admitted-stablecoin whitelist, and admitted orchestrators: see the [Orchestrator Registry](02-solstice-program-governance.md#2312-orchestrator-registry-admitted-orchestrators) *(on-chain links to be added)*
 - Filecoin Pay contracts: *(links to be added)*
+
+## 3.4 Solstice Orchestrator Task Checklist
+Use this checklist to track completion of the core Solstice Orchestrator responsibilities.
+
+
+| Reference                           | Link                                                                                                                                |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Orchestrator Operational Guidelines | [View Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| Solstice Program Governance         | [View Governance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md)         |
+| Quarterly Review & Runbook          | [View Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| Solstice Governance Repository      | [View Repository](https://github.com/filecoin-project/Solstice-Governance)                                                          |
+
+---
+<summary><strong>3.4.1 — Every New Client / Deal </strong></summary>
+
+Complete before counting FPV from a new payer/operator relationship.
+
+| Done | Task                                                       | Timing                         | Reference                                                                                                                                    |
+| ---- | ---------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ ]  | Confirm there is a genuine paying Filecoin storage client  | Before onboarding              | [Qualifying Volume Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)  |
+| [ ]  | Confirm payer and operator identities                      | Before registration            | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Check payer/operator relationship for common control       | Before registration            | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Check for potential self-dealing                           | Before registration            | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Confirm payment will use an admitted Filecoin Pay contract | Before settlement              | [Settlement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)         |
+| [ ]  | Confirm payment asset is admitted                          | Before settlement              | [Current Parameters](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md#24-parameters) |
+| [ ]  | Establish payment rail between payer and operator          | Before settlement              | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Check whether payer/operator pair is already registered    | Before registration            | [Governance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md)                       |
+| [ ]  | Register payer/operator pair using `RegisterPairs`         | **Before settlement**          | [Pair Registration Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)  |
+| [ ]  | Confirm registration succeeded on-chain                    | Immediately after registration | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Confirm payments are settling through the registered rail  | After setup                    | [Settlement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)         |
+| [ ]  | Retain evidence supporting the client relationship         | Ongoing                        | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)            |
+
+> **Important:** Volume settled before the payer/operator pair is registered cannot be attributed retroactively.
+
+---
+<summary><strong>3.4.2 — Treasury & Wallet Management </strong></summary>
+
+| Done | Task                                                                     | Cadence      | Reference                                                                                                                           |
+| ---- | ------------------------------------------------------------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [ ]  | Monitor service-stream reward accruals                                   | Ongoing      | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Claim rewards when operationally appropriate                             | As needed    | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)      |
+| [ ]  | Track rewards received                                                   | Ongoing      | [Quarterly Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)      |
+| [ ]  | Reconcile treasury inflows and outflows                                  | Regularly    | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Review wallet access and multisig signers                                | Regularly    | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Keep operational funds separated from protected reserves where practical | Ongoing      | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Maintain hardware-backed signing where practical                         | Ongoing      | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Maintain and test wallet recovery procedures                             | Periodically | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Monitor for unauthorized wallet activity                                 | Ongoing      | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Rotate exposed credentials immediately                                   | As needed    | [Wallet Guidance](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+
+---
+<summary><strong>3.4.3 — Quarter-End FPV Calculation </strong></summary>
+
+| Done | Task                                                        | Timing              | Reference                                                                                                                                    |
+| ---- | ----------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ ]  | Confirm the reporting quarter has ended                     | Quarter close       | [Timing Parameters](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md#24-parameters)  |
+| [ ]  | Identify active registered payer/operator pairs             | Quarter close       | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Retrieve settlement activity for those pairs                | Quarter close       | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Exclude settlements occurring before pair registration      | Quarter close       | [Measurement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)        |
+| [ ]  | Exclude settlements using non-admitted contracts            | Quarter close       | [Measurement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)        |
+| [ ]  | Exclude settlements using non-admitted assets               | Quarter close       | [Current Parameters](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md#24-parameters) |
+| [ ]  | Confirm remaining volume represents genuine client payments | Quarter close       | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)               |
+| [ ]  | Convert qualifying FIL volume using approved methodology    | Quarter close       | [Measurement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)        |
+| [ ]  | Calculate total quarterly FPV                               | Quarter close       | [Measurement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)        |
+| [ ]  | Reconcile FPV against internal records                      | Before posting      | [Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)                         |
+| [ ]  | Reconcile FPV against public settlement activity            | Before posting      | [Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)                         |
+| [ ]  | Resolve material discrepancies                              | Before posting      | [Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)                         |
+| [ ]  | Finalize quarterly FPV                                      | Before `PostVolume` | [Measurement Rules](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)        |
+
+---
+<summary><strong>3.4.4 — Post Quarterly FPV </strong></summary>
+
+| Done | Task                                      | Timing                    | Reference                                                                                                                                   |
+| ---- | ----------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ ]  | Confirm `POST_PERIOD` is open             | Post period               | [Timing Parameters](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md#24-parameters) |
+| [ ]  | Confirm final FPV amount                  | Before posting            | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)              |
+| [ ]  | Submit FPV using `PostVolume`             | Post period               | [PostVolume Requirements](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md) |
+| [ ]  | Confirm transaction succeeded             | Immediately after posting | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)              |
+| [ ]  | Confirm posted FPV matches calculated FPV | Immediately after posting | [Guidelines](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/03-orchestrator-operational-guidelines.md)              |
+| [ ]  | Save posting transaction reference        | Immediately after posting | —                                                                                                                                           |
+
+---
+<summary><strong>3.4.5 — Verification Window </strong></summary>
+
+| Done | Task                                                     | Timing               | Reference                                                                                                                                   |
+| ---- | -------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ ]  | Confirm verification window is open                      | Verification window  | [Timing Parameters](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/02-solstice-program-governance.md#24-parameters) |
+| [ ]  | Recompute FPV using the reference indexer when available | Verification window  | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Compare recomputed FPV against posted FPV                | Verification window  | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Review registered-pair state used in calculation         | Verification window  | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Review FIL conversion calculations where applicable      | Verification window  | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Investigate discrepancies                                | Immediately          | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Proactively report material discrepancies                | Immediately          | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Monitor GitHub for verification requests                 | Verification window  | [GitHub Issues](https://github.com/filecoin-project/Solstice-Governance/issues)                                                             |
+| [ ]  | Respond to verification requests                         | Within 7 days        | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Complete required corrections                            | Before window closes | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+| [ ]  | Confirm final FPV                                        | Before window closes | [Verification Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md)           |
+
+---
+<summary><strong>3.4.6 — Quarterly Community Report </strong></summary>
+
+| Done | Task                                             | Timing                   | Reference                                                                                                                      |
+| ---- | ------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| [ ]  | Open current Quarterly Community Report template | Each quarter             | [Report Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)       |
+| [ ]  | Prepare quarterly report                         | Each quarter             | [Reporting Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md) |
+| [ ]  | Include Orchestrator identification              | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include claimed FPV                              | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include rewards received                         | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include required financial information           | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Explain use of service rewards                   | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include what worked and what did not             | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include key lessons learned                      | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include next-quarter outlook                     | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Include required disclosures                     | Each quarter             | [Template](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/quarterly-reports/_TEMPLATE.md)              |
+| [ ]  | Publish report in required repository location   | Each quarter             | [Quarterly Reports](https://github.com/filecoin-project/Solstice-Governance/tree/main/docs/quarterly-reports)                  |
+| [ ]  | Respond to questions or challenges               | Required response window | [Reporting Runbook](https://github.com/filecoin-project/Solstice-Governance/blob/main/docs/04-quarterly-review-and-runbook.md) |
+
+---
+<summary><strong>3.4.7 — Quarter Closeout </strong></summary>
+
+| Done | Task                                                       |
+| ---- | ---------------------------------------------------------- |
+| [ ]  | Confirm final bound FPV                                    |
+| [ ]  | Confirm resulting service-stream share                     |
+| [ ]  | Confirm expected rewards are accruing correctly            |
+| [ ]  | Archive FPV calculations                                   |
+| [ ]  | Archive client-relationship evidence                       |
+| [ ]  | Archive payment and settlement records                     |
+| [ ]  | Archive treasury records                                   |
+| [ ]  | Archive relevant governance correspondence                 |
+| [ ]  | Confirm quarterly report is publicly available             |
+| [ ]  | Confirm no unresolved governance requests remain           |
+| [ ]  | Carry unresolved operational actions into the next quarter |
+
+<summary><strong>3.4.8 — Operational Tooling Still Pending </strong></summary>
+
+| Tool / Resource                       | Status  |
+| ------------------------------------- | ------- |
+| Reference FPV indexer                 | **TBD** |
+| Settlement data / dashboard           | **TBD** |
+| Governance and signing interface      | **TBD** |
+| Direct on-chain registry interface    | **TBD** |
+| Filecoin Pay contract reference links | **TBD** |
+| Final admitted stablecoin whitelist   | **TBD** |.
 ---
 
 ← Previous: [2. Solstice Program Governance](02-solstice-program-governance.md) · [Back to README](../README.md) · Next: [4. Quarterly Review and Runbook](04-quarterly-review-and-runbook.md) →

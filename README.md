@@ -14,7 +14,7 @@ Each section below is a separate page, ordered by its number, so a reader intere
 | 2. Solstice Program Governance | [`docs/02-solstice-program-governance.md`](docs/02-solstice-program-governance.md) | Governance tiers & Safes · SWA tier · SRA tier (+ Orchestrator Registry) · Parameters · Safety and rotation playbook |
 | 3. Orchestrator Operational Guidelines | [`docs/03-orchestrator-operational-guidelines.md`](docs/03-orchestrator-operational-guidelines.md) | Orchestrator guidelines · policies · tasks · monitoring |
 | 4. Quarterly Review and Runbook | [`docs/04-quarterly-review-and-runbook.md`](docs/04-quarterly-review-and-runbook.md) | Quarterly community reporting duty · report template · example · declaration, verification & escalation |
-| 5. Quarterly Reports | [`docs/05-quarterly-reports.md`](docs/05-quarterly-reports.md) | Archive/history of filed quarterly reports (one page per report) |
+| 5. Reports | [`docs/05-quarterly-reports.md`](docs/05-quarterly-reports.md) | Archive/history of filed quarterly reports (one page per report) |
 | 6. Program Change Log | [`docs/06-changelog.md`](docs/06-changelog.md) | Rule-change history with community issues & FIP links |
 
 ### Contains key documentation including:
@@ -36,6 +36,10 @@ Changes happen by pull request with public review — covering, but not limited 
 - FIP text: [FIP-0118](https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0118.md)
 - Reference indexer: TBD
 - Settlement data and dashboards: TBD
+
+## 1.5 Repository Maintainers
+
+Maintainers keep this repository current and administer pull requests. Authority over the Solstice program rests with two governance tiers (the SWA and SRA Safes) as fixed by FIP-0118.
 
 ---
 
